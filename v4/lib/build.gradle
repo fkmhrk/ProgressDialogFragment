@@ -13,7 +13,7 @@ android {
     }
     buildTypes {
         release {
-            runProguard false
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -24,7 +24,7 @@ apply plugin: 'maven'
 uploadArchives {
     repositories.mavenDeployer {
         repository url: "file://$System.env.HOME/.m2/repository"
-        pom.version = '0.1.0'
+        pom.version = '1.0.0'
         pom.groupId = 'jp.fkmsoft.libs'
         pom.artifactId = 'ProgressDialogFragment-v4'
     }
